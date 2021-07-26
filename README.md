@@ -15,7 +15,7 @@ Different scenarios on Cloud environments are also a major source for data leak 
 	* `$COMPANY`
 	* `$SIEM_IP`
 	* `$SIEM_SYSLOG_PORT` 
-4. If your SIEM is already fed by different log sources that use rsyslog protocol, you can run the container with a specified hostname (`-h or --hostname`) in order to avoid mixed events in the same log source identifier as per the following example:
+4. If your SIEM is already fed by different log sources that use rsyslog protocol on the same server you're using to run the script, you can run the container with a specified hostname (`-h or --hostname`) in order to avoid mixed events in the same log source identifier as per the following example:
 	* `docker run -h google-leak -v $(pwd):/usr/app prh/google-leak unicorns 192.168.100.30 514`
 
 ### Schedule
