@@ -13,6 +13,11 @@
         "dork": ["s3.amazonaws.com"],
         "description" : "Open buckets"
     },
+    "azure":{
+        "type": "site:",
+        "dork": ["azurewebsites.net", "blob.core.windows.net", "cloudapp.azure.com"],
+        "description" : "Public storage accounts"
+    },
     "workflow":{
         "type": "site:",
         "dork": ["coggle.it", "prezi.com", "diagrams.net"],
