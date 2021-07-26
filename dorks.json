@@ -1,0 +1,36 @@
+{   "atlassian": {
+        "type": "site:",
+        "dork": ["trello.com","atlassian.net", "jira.atlassian.com", "bitbucket.org"],
+        "description" : "Cloud instances and public trello boards"
+    },
+    "drive":{
+        "type": "site:",
+        "dork": ["drive.google.com","onedrive.live.com","dl.dropbox.com"],
+        "description" : "Public drives"
+    },
+    "s3":{
+        "type": "site:",
+        "dork": ["s3.amazonaws.com"],
+        "description" : "Open buckets"
+    },
+    "workflow":{
+        "type": "site:",
+        "dork": ["coggle.it", "prezi.com", "diagrams.net"],
+        "description" : "Public diagrams"
+    },
+    "coding":{
+        "type": "site:",
+        "dork": ["github.com", "gitlab.com","jsdeliver.net","libraries.io"],
+        "description" : "Open repos and public code"
+    },
+    "pastebin":{
+        "type": "site:",
+        "dork": ["pastebin.com", "justpaste.it"],
+        "description" : "Pastebin"
+    },
+    "juicyfiles":{
+        "type": "filetype:",
+        "dork": ["sql", "txt", "xml", "log", "mail", "eml", "mbox", "mbx", "bak", "dump", "cfg"],
+        "description" : "Malconfigured app/servers"
+    }
+}
