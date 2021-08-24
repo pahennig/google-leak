@@ -7,7 +7,7 @@ Such configuration settings allow us to track our findings through our SIEM dire
 
 **Rule**
 <br>
-<img src="imgs/2021-08-24_12-56.png" width=350> 
+<img src="imgs/2021-08-24_12-56.png" width=350><br>
 <img src="imgs/2021-08-24_12-57.png" width=350> 
 
 
