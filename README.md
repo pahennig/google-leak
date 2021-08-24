@@ -24,3 +24,6 @@ Since the script will use a base file to interpret new findings, you can use it 
 
 As an example of the mentioned shell file within our cron, refer to this example:
 * [cronfile.sh](https://github.com/pahennig/google-leak/blob/main/cronfile.sh)
+
+### SIEM - Use Case
+* [Example](https://github.com/pahennig/google-leak/tree/siem)
