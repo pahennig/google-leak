@@ -2,9 +2,12 @@ import json
 from googlesearch import search
 from datetime import date
 import customrsyslog
+import logging
 import sys
 
 COMPANY = sys.argv[1]
+
+log = logging.getLogger(__name__)
 
 
 class DorkReader:
@@ -45,7 +48,7 @@ class SearchAndWrite:
                 for result in runningsearch:
                     notification.append(result)
         except:
-            print("Search blocked by Google")
+            log.error("Search blocked by Google")
         return notification
 
     def create_alert(self):
@@ -60,17 +63,18 @@ class SearchAndWrite:
             siem_logger = customrsyslog.rfc5434_logger('siem_alerts')
             siem_alert = []
 
-            print("Updating base file...")
+            log.info("Updating base file...")
             appending = open("base.txt", "a+")
             today = date.today()
             appending.write(today.strftime("%d/%m/%Y")+"\n")
 
             for i in list_difference:
-                print(i)
+                log.info(i)
                 appending.write(i+"\n")
                 siem_alert.append(i)
             appending.close()
-            siem_logger.info("URL alert: "+str(siem_alert))
+            for entry in siem_alert:
+                siem_logger.info("URL alert: "+str(entry))
 
 if __name__ == '__main__':
     dork_loader = DorkReader("dorks.json")
